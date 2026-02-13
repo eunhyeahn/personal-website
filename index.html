@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eunhye Ahn — Assistant Professor, Washington University in St. Louis</title>
+    <meta name="description" content="Eunhye Ahn, PhD — Assistant Professor at Brown School, Washington University in St. Louis. Research on AI ethics, child welfare, and data science for social work.">
+
+    <!-- Google Analytics — replace G-XXXXXXXXXX with your tracking ID -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --text: #2c2c2c;
+            --text-secondary: #5a5a5a;
+            --accent: #8b0000;
+            --bg: #fafaf8;
+            --border: #e0ddd8;
+            --max-width: 680px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Vollkorn', Georgia, serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+            margin-bottom: 48px;
+        }
+
+        .photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid var(--border);
+        }
+
+        .photo-placeholder {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background: #e8e6e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .header-text h1 {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+            margin-bottom: 6px;
+        }
+
+        .header-text .affiliation {
+            font-size: 16px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 16px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .links a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .links .sep {
+            color: var(--border);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 15px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section p {
+            margin-bottom: 14px;
+            font-weight: 400;
+        }
+
+        section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .research-area {
+            margin-bottom: 16px;
+        }
+
+        .research-area strong {
+            font-weight: 600;
+        }
+
+        /* Selected publications */
+        .pub-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pub-list li {
+            margin-bottom: 12px;
+            font-size: 15px;
+            font-weight: 400;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .pub-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--border);
+        }
+
+        .pub-list li em {
+            color: var(--text-secondary);
+        }
+
+        .pub-list li a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .pub-list li a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 56px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Mobile */
+        @media (max-width: 540px) {
+            main { padding: 40px 20px 60px; }
+
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .links {
+                justify-content: center;
+            }
+
+            .header-text h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <img src="photo.jpg" alt="Eunhye Ahn" class="photo">
+
+            <div class="header-text">
+                <h1>Eunhye Ahn</h1>
+                <div class="affiliation">
+                    Assistant Professor, Brown School<br>
+                    Washington University in St. Louis
+                </div>
+                <div class="links">
+                    <span>ahne [at] wustl.edu</span>
+                    <span class="sep">·</span>
+                    <a href="Eunhye_Ahn_CV.pdf">CV</a>
+                    <span class="sep">·</span>
+                    <a href="https://scholar.google.com/citations?user=plHw5vgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <h2>About</h2>
+            <p>
+                I am an Assistant Professor at the Brown School of Social Work, Washington University in St. Louis, with affiliations in AI for Health, the Center for Innovation in Child Maltreatment Policy, Research and Training, and the Division of Computational &amp; Data Sciences. I received my PhD from the University of Southern California and my MSW from Monash University, Australia.
+            </p>
+            <p>
+                My research asks: <strong>how can we thoughtfully navigate inequalities reshaped by AI and close equity gaps?</strong> I explore this question across three interconnected areas — the landscape of AI inequality, human interaction with AI, and the systems that serve children and families. My work is guided by two principles: that truly human-centered AI must design around people (not the other way around), and that AI decisions must consider the next generation, not just current conditions.
+            </p>
+        </section>
+
+        <section>
+            <h2>Research</h2>
+            <p>I address this question in three interconnected areas:</p>
+
+            <div class="research-area">
+                <p><strong>The Landscape</strong> — I study who is being left behind as AI reshapes society and how this latest iteration of technology is transforming existing inequalities.</p>
+            </div>
+
+            <div class="research-area">
+                <p><strong>The Interaction</strong> — I examine how to ensure humans remain critically engaged when using AI in high-stakes decision-making, rather than defaulting to blind trust or blanket rejection.</p>
+            </div>
+
+            <div class="research-area">
+                <p><strong>The System</strong> — I use data science and AI to understand how children and families move through services, where systems fail them, and how policy discourse shapes the institutions families encounter.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>How I Became a Data Scientist</h2>
+            <p>
+                I'm often asked how I became a data scientist without a computer science background. In 2015, I began exploring whether I could contribute to both social work and computer science by learning data science. I participated in the Melbourne Datathon in 2016 and connected with computational social science faculty at Monash University.
+            </p>
+            <p>
+                During my MSW program, I taught myself introductory data science through online courses on Coursera, MIT OpenCourseWare, and iTunesU — covering probability, linear algebra, R programming, and machine learning. I continued with data science electives during my doctoral training, including computational thinking, informatics, and ML for health sciences.
+            </p>
+            <p>
+                In 2019, I was accepted into the <a href="https://www.datascienceforsocialgood.org/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent;">Data Science for Social Good Fellowship</a> at Imperial College London — the only social work student accepted in the program's seven-year history. That training, combined with years of self-directed learning, became the foundation for applying data science to my qualifying exam and dissertation on ML fairness in child welfare.
+            </p>
+        </section>
+
+        <section>
+            <h2>Selected Publications</h2>
+            <ul class="pub-list">
+                <li>Ahn, E. (2025). Who is the Human in Human-Centered AI? <em>AI &amp; Society</em>. <a href="https://doi.org/10.1007/s00146-025-02825-6">doi</a></li>
+                <li>Ahn, E., Choi, M., Fowler, P., &amp; Song, I. (2025). Artificial Intelligence (AI) Literacy for Social Work: Implications for Core Competencies. <em>Journal of Society for Social Work Research</em>. <a href="https://doi.org/10.1086/735187">doi</a></li>
+                <li>Ahn, E., Tejeda, Y., &amp; Yang, Y. (2024). Examining Fairness in Machine Learning Applied to Support Families. <em>Family Relations</em>. <a href="http://doi.org/10.1111/fare.13114">doi</a></li>
+                <li>Ahn, E., An, R., Jonson-Reid, M., &amp; Palmer, L. (2024). Leveraging Machine Learning for Effective Child Maltreatment Prevention. <em>Child Abuse &amp; Neglect</em>. <a href="https://doi.org/10.1016/j.chiabu.2024.106706">doi</a></li>
+                <li>Ahn, E., Gil, Y., &amp; Putnam-Hornstein, E. (2021). Predicting Youth at High Risk of Aging Out of Foster Care Using Machine Learning Methods. <em>Child Abuse &amp; Neglect</em>. <a href="https://doi.org/10.1016/j.chiabu.2021.105059">doi</a></li>
+            </ul>
+            <p style="font-size: 14px; margin-top: 16px; color: var(--text-secondary); font-family: 'Source Sans 3', sans-serif;">
+                Full list on <a href="https://scholar.google.com/citations?user=plHw5vgAAAAJ&hl=en" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Google Scholar</a> or in my <a href="Eunhye_Ahn_CV.pdf" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">CV</a>.
+            </p>
+        </section>
+
+        <footer>
+            Eunhye Ahn · ahne [at] wustl.edu · Washington University in St. Louis
+        </footer>
+    </main>
+</body>
+</html>
