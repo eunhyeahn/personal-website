@@ -20,10 +20,10 @@
 
     <style>
         :root {
-            --text: #2c2c2c;
-            --text-secondary: #5a5a5a;
+            --text: #000000;
+            --text-secondary: #444444;
             --accent: #8b0000;
-            --bg: #fafaf8;
+            --bg: #ffffff;
             --border: #e0ddd8;
             --max-width: 680px;
         }
@@ -150,6 +150,57 @@
             font-weight: 600;
         }
 
+        .research-question {
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.45;
+            margin-bottom: 6px;
+        }
+
+        .research-tagline {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 18px;
+        }
+
+        .research-sub {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin: 26px 0 10px;
+        }
+
+        /* Research diagram: wider than the text column so the labels stay legible */
+        .diagram {
+            --diagram-width: min(1000px, calc(100vw - 48px));
+            width: var(--diagram-width);
+            margin: 28px 0 8px calc(50% - var(--diagram-width) / 2);
+        }
+
+        .diagram a {
+            display: block;
+        }
+
+        .diagram img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: #ffffff;
+        }
+
+        .diagram .caption {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            text-align: center;
+        }
+
         /* Selected publications */
         .pub-list {
             list-style: none;
@@ -243,27 +294,49 @@
             <h2>About</h2>
             <p>
                I am an Assistant Professor in the Department of Human Development and Family Studies, with a secondary appointment in Consumer Science, at the School of Human Ecology, University of Wisconsin-Madison. I received my PhD in social work from the University of Southern California, my master's degree in social work from Monash University in Australia, and my bachelor's degree in business administration from Yonsei University in South Korea.
-
+            </p>
         </section>
 
         <section>
             <h2>Research</h2>
-            <p>
-                My research asks <strong style="font-weight: 700;"><em>how we can thoughtfully navigate the inequalities being reshaped by AI</em></strong>, and <strong style="font-weight: 700;"><em>how we can use these same technologies to close equity gaps.</em></strong> I approach AI from both directions, studying it as a social force and deploying it as a research tool, across three interconnected areas.
+            <p class="research-question">
+                How does AI reshape inequality among families &mdash; in their individual lives, within family relationships, and through the systems that serve them &mdash; and how can we understand and govern it?
             </p>
-            <div class="research-area">
-                <p><strong>The Landscape.</strong> I study who is being left behind as AI reshapes society, and how this latest wave of technology transforms existing inequalities rather than simply creating new ones.</p>
-            </div>
+            <p class="research-tagline">Human-centered AI through a human ecology lens</p>
 
-            <div class="research-area">
-                <p><strong>The Interaction.</strong> I examine how humans can remain critically engaged when using AI in high-stakes decisions, neither defaulting to blind trust nor retreating into blanket rejection, so that these tools genuinely support human judgment and wellbeing.</p>
-            </div>
-
-            <div class="research-area">
-                <p><strong>The System.</strong> I turn AI and data science into instruments for equity. Using computational methods, I study how children and families move through service systems, where those systems fail them, and how policy discourse shapes the institutions families encounter.</p>
-            </div>
             <p>
-                Two principles guide this work. Truly human-centered AI must be designed around people, not the other way around. And decisions about AI must account for the next generation, not just present conditions.
+                AI is entering family life from two directions. Public systems use it to decide which families are investigated, who qualifies for support, and whose benefits continue. Families are beginning to use it themselves: to make sense of those decisions, find help, and navigate care. Either can widen or narrow the gap between families with resources and those without. My research asks which, for whom, and what should be done about it.
+            </p>
+            <p>
+                I approach this as a computational social scientist trained in social work, with a decade of population-level research on child protection systems using linked administrative data. That foundation lets me study AI from inside the systems it is changing, rather than from the outside.
+            </p>
+
+            <figure class="diagram">
+                <a href="research_diagram_with_publications.png" target="_blank" rel="noopener">
+                    <img src="research_diagram_with_publications.png" alt="Diagram of three relationships among Systems, Families, and AI, with Ethics, Governance, Policy and AI as instrument at the center, and related publications listed under each relationship.">
+                </a>
+                <figcaption class="caption">Three relationships among families, systems, and AI, with related publications. Click to enlarge.</figcaption>
+            </figure>
+
+            <p class="research-sub">Three relationships</p>
+            <div class="research-area">
+                <p><strong>Systems &amp; Families.</strong> How do systems see, record, and judge families, and whom do they miss? I study this through birth-cohort studies of child protection contact and, increasingly, through the text these systems produce: 1.3 million child protection investigation narratives in Michigan, fifty years of congressional hearings on child welfare, and fair hearing decisions that record why families lose benefits.</p>
+            </div>
+            <div class="research-area">
+                <p><strong>AI &amp; Systems.</strong> When AI enters public decisions, who gains, who loses, and who stays accountable? I examine fairness in predictive risk models used in child welfare, how frontline workers interpret and act on algorithmic recommendations, and what governance public services need that private-sector frameworks do not provide. A new direction asks whether automated eligibility decisions shift administrative burden onto the families least able to bear it.</p>
+            </div>
+            <div class="research-area">
+                <p><strong>Families &amp; AI.</strong> Who gets to use AI, and how? Does it add to the support families already have, or replace it? I study the AI divide across sociodemographic groups and, through a naturalistic study and Reddit data, how caregivers actually use large language models within their caregiving ecosystems.</p>
+            </div>
+
+            <p class="research-sub">Where they meet</p>
+            <p>
+                These relationships converge on ethics, governance, and policy: how should AI enter family life, and what evidence should guide that? My aim is not to build or ban these tools but to produce the evidence that helps practitioners, agencies, and policymakers decide well, in the United States and in South Korea, where I advise on national guidelines for AI in mental health services.
+            </p>
+
+            <p class="research-sub">AI as instrument</p>
+            <p>
+                Much of this work uses AI itself as a research tool, reading records and discourse at a scale that was not possible before. That raises a question I take as seriously as the substantive ones: does it measure what we think it does? Part of my research is therefore methodological, establishing the reliability and validity of LLM-based measurement within the conventions of social science statistics.
             </p>
         </section>
 
